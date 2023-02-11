@@ -21,14 +21,14 @@ export const transactionsFileIntoList = (file: string) => {
         type: Number(type),
         date,
         product,
-        value: Number(value),
+        value: Number(value)/100, // Converting to cents
         salesPerson,
       }
 
       return transaction;
     });
 
-  console.log(transactions);
+
   return transactions;
 };
 
