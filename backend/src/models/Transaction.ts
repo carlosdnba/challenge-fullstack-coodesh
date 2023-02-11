@@ -9,7 +9,7 @@ export default class Transaction {
   type: number;
 
   @Column()
-  date: Date;
+  date: string;
 
   @Column()
   product: string;
