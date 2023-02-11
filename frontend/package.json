@@ -1,7 +1,8 @@
 {
-  "name": "challenge-fullstack-coodesh",
+  "name": "@challenge-fullstack-coodesh/frontend",
   "version": "0.1.0",
-  "private": true,
+  "author": "Carlos Daniel <carlosdnbarboza@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@react-css/grid": "^2.1.0",
     "axios": "^1.2.0",
