@@ -17,6 +17,17 @@ export default {
   async index(req: Request, res: Response) {
     // Getting file data from request
     const [file] = req.files as Express.Multer.File[];
+
+    // Validating file type
+    if (file.mimetype !== 'text/plain') {
+      // Removing file to not fill up the server
+      await files.deleteFile(file.path);
+      return res.status(400).send({
+        status: 'error',
+        message: 'File must be a text file.'
+      });
+    }
+
     const data = await files.readFile(file.path);
 
     const transactions = parser.transactionsFileIntoList(data);
@@ -38,7 +49,7 @@ export default {
     await files.deleteFile(file.path);
 
     res.status(200).send({
-        transactions
+      transactions
     });
   },
 };
