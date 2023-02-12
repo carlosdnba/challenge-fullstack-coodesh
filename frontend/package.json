@@ -4,6 +4,10 @@
   "author": "Carlos Daniel <carlosdnbarboza@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.8",
+    "@mui/x-data-grid": "^5.17.23",
     "@react-css/grid": "^2.1.0",
     "axios": "^1.2.0",
     "moment": "^2.29.4",
